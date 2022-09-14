@@ -1,0 +1,196 @@
+[data-theme="light"] {
+    --primary:#356220;
+    --secondary: #65ab1e;
+    --light: #caed93;
+    --dark: #000000;
+    --diabled: #ffffff;
+    --background: #fcfcfc;
+}
+[data-theme="dark"] {
+    --primary: #1363DF;
+    --secondary: #47B5FF;
+    --light: #b1e4f8;
+    --dark: #06283D;
+    --diabled: #ffffff;
+    --background: #191919;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilos del switch */
+
+.switch {
+    position: relative;
+    display: inline-flex;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--primary);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: var(--background);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Tasks List */
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: var(--diabled);
+    font-size: 1em;
+    
+}
+
+*:first-letter {
+    text-transform: capitalize;
+}
+
+.roundBorder {
+    border-radius: 5px;
+}
+
+.list {
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--light);
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateRight {
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber {
+    font-size: 50px;
+}
+
+#dateText {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText  {
+    font-weight: bold;
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+form {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 30px auto;
+    grid-column-gap: 15px;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color:var(--diabled);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.addTaskButton,
+.orderButton {
+    margin: auto;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    
+}
+
+.addTaskButton {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    font-family: 'Lato', serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.orderButton {
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: center;
+}
+
+.task {
+    background-color: var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--light);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.done {
+    background-color: var(--diabled);
+    text-decoration: line-through;
+    color: var(--dark);
+    box-shadow: none;
+}
